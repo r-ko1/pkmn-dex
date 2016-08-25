@@ -10,10 +10,12 @@ import {Service} from '../../service'
 export class Gen1Page {  
   
   private appRootFolder:string;
+  yaml: any;
   
   constructor(private navCtrl: NavController, private service:Service) {
   
-	service.getData();
+	service.getData().subscribe( (res) => this.yaml = res);
+	console.log(this.yaml);
 	
 	/* TODO: testar quando for com apk
 	File.readAsText('./pokemon.yaml')

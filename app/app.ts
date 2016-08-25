@@ -1,7 +1,7 @@
 import {Component, ViewChild} from '@angular/core';
 import {Http, Response, RequestOptions, Headers, Request, RequestMethod, HTTP_PROVIDERS} from '@angular/http';
 import {Platform, ionicBootstrap, Nav, MenuController} from 'ionic-angular';
-
+import * as Rx from 'rxjs/Rx';
 import {Service} from './service'
 
 import {StatusBar} from 'ionic-native';
@@ -47,4 +47,4 @@ class MyApp {
 	}
 }
 
-ionicBootstrap(MyApp, [HTTP_PROVIDERS]);
+ionicBootstrap(MyApp, [HTTP_PROVIDERS], Rx);

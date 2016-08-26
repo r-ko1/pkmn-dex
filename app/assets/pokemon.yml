@@ -1,6 +1,5 @@
-%TAG !dex! tag:veekun.com,2005:pokedex/
---- !!omap
-- bulbasaur:
+
+- &bulbasaur:
     name:
       de: BISASAM
       en: BULBASAUR
@@ -23,7 +22,7 @@
       minimum-level: 16
       trigger: level-up
     moves:
-      level-up:
+      lvlUp:
       - 1: tackle
       - 1: growl
       - 7: leech-seed
@@ -49,7 +48,7 @@
       - rest
       - substitute
       - cut
-- ivysaur:
+- &ivysaur:
     name:
       de: BISAKNOSP
       en: IVYSAUR
@@ -72,7 +71,7 @@
       minimum-level: 32
       trigger: level-up
     moves:
-      level-up:
+      lvlUp:
       - 1: tackle
       - 1: growl
       - 1: leech-seed
@@ -99,7 +98,7 @@
       - rest
       - substitute
       - cut
-- venusaur:
+- &venusaur:
     name:
       de: BISAFLOR
       en: VENUSAUR
@@ -119,7 +118,7 @@
     base-experience: 208
     evolutions: []
     moves:
-      level-up:
+      lvlUp:
       - 1: tackle
       - 1: growl
       - 1: leech-seed

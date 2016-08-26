@@ -13,7 +13,7 @@ export class Service {
 
   setGen1() {
     this.http
-      .get('build/assets/pokemon.yaml')
+      .get('build/assets/pokemon.yml')
 	  .map((res:Response) => res.text())
       .subscribe(data => this.gen1 = yaml.load(data));	  
   }

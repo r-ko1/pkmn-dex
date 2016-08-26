@@ -3,14 +3,14 @@
 	<button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Gen I</ion-title>
+    <ion-title>{{pkmn.name.en}}</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding class="">
 	<ion-list>
-		<ion-item *ngFor="let pkmn of pkmnList" (click)="onTap($event, pkmn)">
-			{{pkmn.name.en}}
+		<ion-item *ngFor="let types of pkmn.types" >
+			{{types}}
 		</ion-item>
 	</ion-list>
 </ion-content>

@@ -1,6 +1,5 @@
-%TAG !dex! tag:veekun.com,2005:pokedex/
---- !!omap
-- bulbasaur:
+
+- &bulbasaur:
     name:
       de: BISASAM
       en: BULBASAUR
@@ -49,7 +48,7 @@
       - rest
       - substitute
       - cut
-- ivysaur:
+- &ivysaur:
     name:
       de: BISAKNOSP
       en: IVYSAUR
@@ -99,7 +98,7 @@
       - rest
       - substitute
       - cut
-- venusaur:
+- &venusaur:
     name:
       de: BISAFLOR
       en: VENUSAUR

@@ -16,7 +16,7 @@ export class Gen1PkmnPage {
   
   constructor(private navCtrl: NavController, private navParams: NavParams) {	
 	this.pkmn = navParams.get('pkmn');
-	console.log(this.pkmn.moves.lvlUp);
+	console.log(this.pkmn);
   }
 }
 

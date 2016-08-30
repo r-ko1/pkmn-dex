@@ -1,5 +1,94 @@
-
-- &bulbasaur:
+- move: &tackle
+    name: 
+      en: tackle
+    type: normal
+    class: physical
+    pp: 35
+    power: 50
+    acc: 100
+    priority: 0	
+    effect: Inflicts regular damage with no additional effect.
+- move : &growl
+    name:
+      en: growl
+    type: normal
+    class: status
+    pp: 40
+    power: 0
+    acc: 100
+    priority: 0	
+    effect: Lowers the target's Attack by one stage.
+- move : &leech-seed
+    name:
+      en: leech-seed
+    type: grass
+    class: status
+    pp: 10
+    power: 0
+    acc: 100
+    priority: 0	
+    effect: Seeds the target, stealing HP from it every turn.	
+- move : &vine-whip
+    name:
+      en: vine-whip
+    type: grass
+    class: physical
+    pp: 25
+    power: 45
+    acc: 100
+    priority: 0	
+    effect: Inflicts regular damage with no additional effect.
+- move : &poison-powder
+    name:
+      en: poison-powder
+    type: poison
+    class: status
+    pp: 35
+    power: 0
+    acc: 75
+    priority: 0	
+    effect: Poisons the target.
+- move : &razor-leaf
+    name:
+      en: razor-leaf
+    type: grass
+    class: physical
+    pp: 25
+    power: 55
+    acc: 95
+    priority: 0	
+    effect: Has an increased chance for a critical hit.	
+- move : &growth
+    name:
+      en: growth
+    type: normal
+    class: status
+    pp: 20
+    power: 0
+    acc: 0
+    priority: 0	
+    effect: Raises the user's Attack and Special Attack by one stage.
+- move : &sleep-powder
+    name:
+      en: sleep-powder
+    type: grass
+    class: status
+    pp: 15
+    power: 0
+    acc: 75
+    priority: 0	
+    effect: Puts the target to sleep.
+- move : &solar-beam
+    name:
+      en: solar-beam
+    type: grass
+    class: special
+    pp: 10
+    power: 120
+    acc: 100
+    priority: 0	
+    effect: Requires a turn to charge before attacking.		
+- pkmn: &bulbasaur
     name:
       de: BISASAM
       en: BULBASAUR
@@ -23,15 +112,15 @@
       trigger: level-up
     moves:
       lvlUp:
-      - 1: tackle
-      - 1: growl
-      - 7: leech-seed
-      - 13: vine-whip
-      - 20: poison-powder
-      - 27: razor-leaf
-      - 34: growth
-      - 41: sleep-powder
-      - 48: solar-beam
+      - 1: *tackle
+      - 1: *growl
+      - 7: *leech-seed
+      - 13: *vine-whip
+      - 20: *poison-powder
+      - 27: *razor-leaf
+      - 34: *growth
+      - 41: *sleep-powder
+      - 48: *solar-beam
       machines:
       - swords-dance
       - toxic
@@ -48,7 +137,7 @@
       - rest
       - substitute
       - cut
-- &ivysaur:
+- pkmn: &ivysaur
     name:
       de: BISAKNOSP
       en: IVYSAUR
@@ -72,16 +161,16 @@
       trigger: level-up
     moves:
       lvlUp:
-      - 1: tackle
-      - 1: growl
-      - 1: leech-seed
-      - 7: leech-seed
-      - 13: vine-whip
-      - 22: poison-powder
-      - 30: razor-leaf
-      - 38: growth
-      - 46: sleep-powder
-      - 54: solar-beam
+      - 1: *tackle
+      - 1: *growl
+      - 1: *leech-seed
+      - 7: *leech-seed
+      - 13: *vine-whip
+      - 22: *poison-powder
+      - 30: *razor-leaf
+      - 38: *growth
+      - 46: *sleep-powder
+      - 54: *solar-beam
       machines:
       - swords-dance
       - toxic
@@ -98,7 +187,7 @@
       - rest
       - substitute
       - cut
-- &venusaur:
+- pkmn: &venusaur
     name:
       de: BISAFLOR
       en: VENUSAUR
@@ -119,17 +208,17 @@
     evolutions: []
     moves:
       lvlUp:
-      - 1: tackle
-      - 1: growl
-      - 1: leech-seed
-      - 1: vine-whip
-      - 7: leech-seed
-      - 13: vine-whip
-      - 22: poison-powder
-      - 30: razor-leaf
-      - 43: growth
-      - 55: sleep-powder
-      - 65: solar-beam
+      - 1: *tackle
+      - 1: *growl
+      - 1: *leech-seed
+      - 1: *vine-whip
+      - 7: *leech-seed
+      - 13: *vine-whip
+      - 22: *poison-powder
+      - 30: *razor-leaf
+      - 43: *growth
+      - 55: *sleep-powder
+      - 65: *solar-beam
       machines:
       - swords-dance
       - toxic

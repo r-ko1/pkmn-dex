@@ -20,26 +20,8 @@ export class Gen1PkmnPage {
 	this.pkmn = navParams.get('pkmn');
   }
   
-  onEvolTap(event, pkmnName) {
-	// http://stackoverflow.com/questions/30107463/find-object-by-match-property-in-nested-array
-	// let dbList = _.filter(this.service.getGen1(), 'pkmn');
-	// let teste = _.find(dbList, _.flow(
-		// _.property('pkmn'),
-		// _.partialRight(_.some, { 'name.en': 'IVYSAUR' })
-	// ));
-	
-	// console.log(teste);
-	// let index = -1;
-	// let dbList = _.filter(this.service.getGen1(), 'pkmn');
-	// let property =  _.map(dbList, _.property('pkmn.name.en'));	
-	// _.forEach(property, function(value, key){
-		// if(value == 'IVYSAUR'){
-			// index = key;
-		// }
-	// });
-	// let obj = _.get(dbList[index], 'pkmn');	
+  onEvolTap(event, pkmnName) {	
 	this.pkmn = this.service.findPkmnByName(pkmnName);
-	console.log(this.pkmn);
   }
   
 }

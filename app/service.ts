@@ -24,15 +24,15 @@ export class Service {
   }
   
   findPkmnByName(name){
+	let pkmn: any;
 	let dbList = _.filter(this.gen1, 'pkmn');
 	let property =  _.map(dbList, _.property('pkmn.name.en'));	
 	_.forEach(property, function(value, key){		
 		if(_.eq(value,name)){			
-			let pkmn = _.get(dbList[key], 'pkmn');
-			console.log(pkmn);
-			return pkmn;	
+			pkmn = _.get(dbList[key], 'pkmn');
 		}
 	});
+	return pkmn;
   }
 
   

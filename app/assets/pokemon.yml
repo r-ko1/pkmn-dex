@@ -107,11 +107,11 @@
     growth-rate: medium-slow
     base-experience: 64
     evolutions:
-    - into: ivysaur
-      minimum-level: 16
+    - into: IVYSAUR
+      minLv: 16
       trigger: level-up
     moves:
-      lvlUp:
+      lvUp:
       - 1: *tackle
       - 1: *growl
       - 7: *leech-seed
@@ -156,11 +156,11 @@
     growth-rate: medium-slow
     base-experience: 141
     evolutions:
-    - into: venusaur
-      minimum-level: 32
+    - into: VENUSAUR
+      minLv: 32
       trigger: level-up
     moves:
-      lvlUp:
+      lvUp:
       - 1: *tackle
       - 1: *growl
       - 1: *leech-seed
@@ -207,7 +207,7 @@
     base-experience: 208
     evolutions: []
     moves:
-      lvlUp:
+      lvUp:
       - 1: *tackle
       - 1: *growl
       - 1: *leech-seed

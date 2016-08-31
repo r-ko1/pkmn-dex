@@ -44,3 +44,23 @@ export class ValuesPipe implements PipeTransform {
         return dataArr;
     }
 }
+
+@Pipe({name:'lvMoves'})
+export class LevelMovesPipe implements PipeTransform{
+    transform(map: any, args?: any[]) : any {
+        if (!map)
+            return null;
+        return Object.keys(map)
+            .map((key) => ({ 
+                'lv': key, 
+                'name': map[key].name,
+                'type': map[key].type,
+                'class': map[key].class,
+                'pp': map[key].pp,
+                'power': map[key].power,
+                'acc': map[key].acc,
+                'priority': map[key].priority,
+                'effect': map[key].effect
+            }));
+    }
+}

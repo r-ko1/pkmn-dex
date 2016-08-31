@@ -2,6 +2,7 @@ import {Http, Response} 	from '@angular/http';
 import {Injectable, Inject} from '@angular/core';
 import { Observable }     	from 'rxjs/Observable';
 import * as yaml 			from 'js-yaml';
+import * as _ 				from 'lodash'
 
 @Injectable()
 export class Service {
@@ -20,6 +21,18 @@ export class Service {
   
   getGen1(){
 	return this.gen1;
+  }
+  
+  findPkmnByName(name){
+	let dbList = _.filter(this.gen1, 'pkmn');
+	let property =  _.map(dbList, _.property('pkmn.name.en'));	
+	_.forEach(property, function(value, key){		
+		if(_.eq(value,name)){			
+			let pkmn = _.get(dbList[key], 'pkmn');
+			console.log(pkmn);
+			return pkmn;	
+		}
+	});
   }
 
   

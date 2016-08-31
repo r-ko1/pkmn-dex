@@ -15,7 +15,6 @@ export class Gen1Page {
   
   constructor(private navCtrl: NavController, private service:Service) {	
 	this.dbList = _.filter(service.getGen1(), 'pkmn');
-	console.log(this.dbList)
   }
   
   onTap(event, pkmn) {

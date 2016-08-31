@@ -17,12 +17,31 @@
 		<ion-row>
 			<ion-col>level</ion-col>
 			<ion-col>name</ion-col>
+            <ion-col>type</ion-col>
+            <ion-col>class</ion-col>
+            <ion-col>PP</ion-col>
+            <ion-col>power</ion-col>
+            <ion-col>acc</ion-col>
+            <ion-col>prior.</ion-col>
 		</ion-row>
-		<ion-row *ngFor="let move of pkmn.moves.lvlUp" >
-			<ion-row *ngFor="let m of move | keys">
-				<ion-col>{{m.key}}</ion-col>
-				<ion-col>{{m.value.get("class")}}</ion-col>
+		<ion-row *ngFor="let moves of pkmn?.moves?.lvUp">
+			<ion-row *ngFor="let m of moves | lvMoves ">
+				<ion-col>{{m.lv}}</ion-col>
+				<ion-col>{{m.name.en}}</ion-col>
+                <ion-col>{{m.type}}</ion-col>
+                <ion-col>{{m.class}}</ion-col>
+                <ion-col>{{m.pp}}</ion-col>
+                <ion-col>{{m.power}}</ion-col>
+                <ion-col>{{m.acc}}</ion-col>
+                <ion-col>{{m.priority}}</ion-col>
 			</ion-row>
 		</ion-row>
+	</ion-list>
+	<ion-list>
+		<ion-item *ngFor="let evol of pkmn.evolutions" (click)="onEvolTap($event, evol.into)">
+			{{evol.into}}
+			{{evol.minLv}}
+			{{evol.trigger}}
+		</ion-item>
 	</ion-list>
 </ion-content>
